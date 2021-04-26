@@ -42,4 +42,6 @@ Route::group(['prefix' => 'authors'], function(){    //prefix auhors reiskiasi a
     Route::post('update/{book}', [BookController::class, 'update'])->name('book.update');
     Route::post('delete/{book}', [BookController::class, 'destroy'])->name('book.destroy');
     Route::get('show/{book}', [BookController::class, 'show'])->name('book.show');
+    
+    Route::get('pdf/{book}', [BookController::class, 'pdf'])->name('book.pdf');
  });
