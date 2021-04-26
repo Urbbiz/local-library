@@ -44,7 +44,7 @@
 
                         <div class="list-line__books__title">
                            <h4> {{$book->title}}</h4>
-                            <h6> Description: {{$book->short_description}}</h6>
+                            <h6> Description: {!!$book->short_description!!}</h6>
                         </div> 
                         <div class="list-line__books__author">
                          Author: {{$book->bookAuthor->name}} {{$book->bookAuthor->surname}}
@@ -52,6 +52,7 @@
                       </div>
 
                       <div class="list-line__buttons">
+                        <a href="{{route('book.show',[$book])}}" class="btn btn-info">SHOW</a>
                         <a href="{{route('book.edit',[$book])}}" class="btn btn-info">EDIT</a>
                         <form method="POST" action="{{route('book.destroy', [$book])}}">
                         @csrf
