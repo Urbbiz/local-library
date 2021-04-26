@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\PublisherController;
 use App\Http\Controllers\BookController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -44,4 +46,14 @@ Route::group(['prefix' => 'authors'], function(){    //prefix auhors reiskiasi a
     Route::get('show/{book}', [BookController::class, 'show'])->name('book.show');
     
     Route::get('pdf/{book}', [BookController::class, 'pdf'])->name('book.pdf');
+ });
+
+ Route::group(['prefix' => 'publishers'], function(){    
+    Route::get('', [PublisherController::class, 'index'])->name('publisher.index');
+    Route::get('create', [PublisherController::class, 'create'])->name('publisher.create');
+    Route::post('store', [PublisherController::class, 'store'])->name('publisher.store');
+    Route::get('edit/{publisher}', [PublisherController::class, 'edit'])->name('publisher.edit');
+    Route::post('update/{publisher}', [PublisherController::class, 'update'])->name('publisher.update');
+    Route::post('delete/{publisher}', [PublisherController::class, 'destroy'])->name('publisher.destroy');
+    Route::get('show/{publisher}', [PublisherController::class, 'show'])->name('publisher.show');
  });
