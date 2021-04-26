@@ -1,4 +1,4 @@
-.list-line {
+    .list-line {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,3 +60,8 @@ body {
 .list-line {
     background: linear-gradient(0deg, rgb(215, 245, 245) 0%, rgb(221, 226, 226) 100%);
 }
+
+.make-inline-show {
+    // display: flex;
+    justify-content: space-between;
+    align-items: center;
