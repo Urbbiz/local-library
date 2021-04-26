@@ -52,8 +52,8 @@
                       </div>
 
                       <div class="list-line__buttons">
+                        <a href="{{route('book.pdf',[$book])}}" class="btn btn-warning">PDF</a>
                         <a href="{{route('book.show',[$book])}}" class="btn btn-info">SHOW</a>
-                        <a href="{{route('book.pdf',[$book])}}" class="btn btn-info">PDF</a>
                         <a href="{{route('book.edit',[$book])}}" class="btn btn-info">EDIT</a>
                         <form method="POST" action="{{route('book.destroy', [$book])}}">
                         @csrf
