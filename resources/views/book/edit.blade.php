@@ -43,6 +43,18 @@
                             </select>
                                 <small class="form-text text-muted">Please select authors name.</small>
                             </div>
+
+                            <div class="form-group">
+                                <label>Publisher:  </label>
+                                 <select name="publisher_id">
+                                 @foreach ($publishers as $publisher)
+                                    <option value="{{$publisher->id}}" @if($publisher->id == $book->publisher_id) selected @endif>
+                                    {{$publisher->title}}
+                                    </option>
+                                 @endforeach
+                            </select>
+                                <small class="form-text text-muted">Please select publisher.</small>
+                            </div>
                              @csrf
                         <button type="submit" class="btn btn-primary">EDIT</button>
                     </form>

@@ -99,6 +99,7 @@ class BookController extends Controller
        $book->isbn = $request->book_isbn;
        $book->short_description = $request->book_short_description;
        $book->author_id = $request->author_id;
+       $book->publisher_id = $request->publisher_id;
        $book->save();
        return redirect()->route('book.index')->with('success_message', 'Book created!');
 
@@ -124,7 +125,8 @@ class BookController extends Controller
     public function edit(Book $book)
     {
         $authors = Author::all();
-        return view('book.edit', ['book' => $book, 'authors' => $authors]);
+        $publishers = Publisher::all();
+        return view('book.edit', ['book' => $book, 'authors' => $authors, 'publishers' => $publishers]);
     }
 
     /**

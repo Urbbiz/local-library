@@ -44,10 +44,13 @@
 
                         <div class="list-line__books__title">
                            <h4> {{$book->title}}</h4>
-                            <h6> Description: {!!$book->short_description!!}</h6>
+                            <h6> <b>Description:</b> {!!$book->short_description!!}</h6>
                         </div> 
                         <div class="list-line__books__author">
-                         Author: {{$book->bookAuthor->name}} {{$book->bookAuthor->surname}}
+                         <b>Author</b>: {{$book->bookAuthor->name}} {{$book->bookAuthor->surname}}
+                        </div>
+                        <div class="list-line__books__author">
+                         <b>Publisher:</b> {{$book->bookPublisher->title}}
                         </div>
                       </div>
 
