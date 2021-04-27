@@ -11,7 +11,7 @@
                   <form method="POST" action="{{route('publisher.store')}}">
                     <div class="form-group">
                         <label>Title: </label>
-                        <input type="text" class="form-control" name="author_name" value="{{old('author_name')}}">
+                        <input type="text" class="form-control" name="publisher_title" value="{{old('publisher_title')}}">
                         <small class="form-text text-muted">Please enter new publisher title.</small>
                     </div>
                      

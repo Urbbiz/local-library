@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Book;
 use Illuminate\Http\Request;
 use App\Models\Author;
+use App\Models\Publisher;
 use Validator;
 use PDF;
 

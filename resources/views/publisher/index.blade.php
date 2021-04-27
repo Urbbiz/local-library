@@ -10,7 +10,6 @@
                
                   
                <a href="{{route('publisher.index',['sort'=>'title'])}}">Sort by title</a>
-               <a href="{{route('publisher.index',['sort'=>'name'])}}">Sort by name</a>
                <a href="{{route('publisher.index')}}">Default</a>
 
 

@@ -25,15 +25,12 @@ class PublisherController extends Controller
         if ('title' == $request->sort) {
             $publishers = Publisher::orderBy('title')->get();
         }
-        // elseif ('surname' == $request->sort) {
-        //     $publishers = Publisher::orderBy('surname')->get();
-        // }
+       
         else {
             $publishers = Publisher::all();
         }
-        // $publishers = Publisher::all();
-        // $publishers = Publisher::orderBy('surname')->get();
-        return view('publisher.index', ['publisher' => $publishers]);
+        
+        return view('publisher.index', ['publishers' => $publishers]);
     }
 
     /**
@@ -57,7 +54,7 @@ class PublisherController extends Controller
         $validator = Validator::make(
             $request->all(),
              [
-           'publisher_title' => ['required','regex:/^[A-Z][a-zA-z\s\'\-]*[a-z]$/', 'min:2', 'max:64'],
+           'publisher_title' => ['required', 'min:2', 'max:64'],
             ],
             [
             
@@ -110,7 +107,7 @@ class PublisherController extends Controller
         $validator = Validator::make(
             $request->all(),
              [
-           'publisher_title' => ['required','regex:/^[A-Z][a-zA-z\s\'\-]*[a-z]$/', 'min:2', 'max:64'],
+           'publisher_title' => ['required', 'min:2', 'max:64'],
             ],
             [
             
